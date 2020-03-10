@@ -4,6 +4,11 @@ import { Link } from 'gatsby';
 export default () => (
 	<div>
 		<h1>Hello world!</h1>
-		<Link to="/blog">Blog</Link>
+		<p>
+			<Link to="/blog">Blog</Link>
+		</p>
+		<p>
+			<Link to="/account">Account</Link>
+		</p>
 	</div>
 );

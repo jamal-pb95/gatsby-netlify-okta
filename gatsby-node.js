@@ -1,7 +1,12 @@
 const path = require(`path`);
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = async ({ actions, graphql, reporter, page }) => {
 	const { createPage } = actions;
+
+	if (page.path.match(/^\/account/)) {
+		page.matchPath = '/account/*';
+		createPage(page);
+	}
 
 	const blogPostTemplate = path.resolve(`src/templates/blog.js`);
 
